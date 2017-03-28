@@ -1,28 +1,382 @@
-"2017-03-16 15:27:38 [main] INFO  com.infy.SpringRestApplication - Starting SpringRestApplication on HYDPCM252071D with PID 7304 (C:\Users\veeraraju.doddi\Desktop\SpringRest\SpringRest\target\classes started by Veeraraju.Doddi in C:\Users\veeraraju.doddi\Desktop\SpringRest\SpringRest)
-""2017-03-16 15:27:38 [main] INFO  com.infy.SpringRestApplication - No active profile set, falling back to default profiles: default
-""2017-03-16 15:27:38 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c3f5566: startup date [Thu Mar 16 15:27:38 IST 2017]; root of context hierarchy
-""2017-03-16 15:27:41 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
-""2017-03-16 15:27:41 [main] INFO  o.a.catalina.core.StandardService - Starting service Tomcat
-""2017-03-16 15:27:41 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.11
-""2017-03-16 15:27:41 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-""2017-03-16 15:27:41 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2852 ms
-""2017-03-16 15:27:41 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
-""2017-03-16 15:27:41 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-""2017-03-16 15:27:41 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-""2017-03-16 15:27:41 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-""2017-03-16 15:27:41 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-""2017-03-16 15:27:42 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-""2017-03-16 15:27:43 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c3f5566: startup date [Thu Mar 16 15:27:38 IST 2017]; root of context hierarchy
-""2017-03-16 15:27:43 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save]}" onto public void com.infy.SpringRestController.saveOrders()
-""2017-03-16 15:27:43 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reports]}" onto public com.infy.Reports com.infy.SpringRestController.getReports() throws com.CustomExceptions.OrderNotFoundException
-""2017-03-16 15:27:43 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-""2017-03-16 15:27:43 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-""2017-03-16 15:27:43 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-""2017-03-16 15:27:43 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-""2017-03-16 15:27:43 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-""2017-03-16 15:27:43 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-""2017-03-16 15:27:43 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
-""2017-03-16 15:27:43 [main] INFO  com.infy.SpringRestApplication - Started SpringRestApplication in 5.961 seconds (JVM running for 6.389)
-""2017-03-16 15:27:43 [cluster-ClusterId{value='58ca61964ce6d91c88ad8d46', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:3}] to localhost:27017
-""2017-03-16 15:27:43 [cluster-ClusterId{value='58ca61964ce6d91c88ad8d46', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 7]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=7062056}
+"2017-03-16 16:26:51 [main] INFO  com.infy.SpringRestApplication - Starting SpringRestApplication on HYDPCM252071D with PID 5736 (C:\Users\veeraraju.doddi\Desktop\SpringRest\SpringRest\target\classes started by Veeraraju.Doddi in C:\Users\veeraraju.doddi\Desktop\SpringRest\SpringRest)
+""2017-03-16 16:26:51 [main] INFO  com.infy.SpringRestApplication - No active profile set, falling back to default profiles: default
+""2017-03-16 16:26:51 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1445d7f: startup date [Thu Mar 16 16:26:51 IST 2017]; root of context hierarchy
+""2017-03-16 16:26:54 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+""2017-03-16 16:26:54 [main] INFO  o.a.catalina.core.StandardService - Starting service Tomcat
+""2017-03-16 16:26:54 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.11
+""2017-03-16 16:26:54 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+""2017-03-16 16:26:54 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2945 ms
+""2017-03-16 16:26:55 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+""2017-03-16 16:26:55 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+""2017-03-16 16:26:55 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+""2017-03-16 16:26:55 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+""2017-03-16 16:26:55 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+""2017-03-16 16:26:55 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+""2017-03-16 16:26:55 [cluster-ClusterId{value='58ca6f774ce6d91668be83c8', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:11}] to localhost:27017
+""2017-03-16 16:26:55 [cluster-ClusterId{value='58ca6f774ce6d91668be83c8', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 7]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=1861777}
+""2017-03-16 16:26:56 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1445d7f: startup date [Thu Mar 16 16:26:51 IST 2017]; root of context hierarchy
+""2017-03-16 16:26:56 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save]}" onto public void com.infy.SpringRestController.saveOrders()
+""2017-03-16 16:26:56 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reports]}" onto public com.infy.Reports com.infy.SpringRestController.getReports() throws com.CustomExceptions.OrderNotFoundException
+""2017-03-16 16:26:56 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2017-03-16 16:26:56 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2017-03-16 16:26:56 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-16 16:26:56 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-16 16:26:56 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-16 16:26:56 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2017-03-16 16:26:57 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+""2017-03-16 16:26:57 [main] INFO  com.infy.SpringRestApplication - Started SpringRestApplication in 6.104 seconds (JVM running for 6.576)
+""2017-03-16 16:28:26 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+""2017-03-16 16:28:26 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+""2017-03-16 16:28:26 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 48 ms
+""2017-03-16 16:28:26 [http-nio-8080-exec-1] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:12}] to localhost:27017
+""2017-03-16 16:28:27 [http-nio-8080-exec-1] ERROR com.infy.SpringRestApplication - Orders found with findAll():[com.infy.Order@516a2292, com.infy.Order@69ae6c8c, com.infy.Order@226c57b1, com.infy.Order@4c356a11, com.infy.Order@4c4bbfb7]
+""2017-03-24 16:30:52 [main] INFO  com.infy.SpringRestApplicationTests - Starting SpringRestApplicationTests on HYDPCM252071D with PID 3760 (started by shalini.magham in D:\cloud\SpringRest with MongoDB\SpringRest\SpringRest)
+""2017-03-24 16:30:52 [main] INFO  com.infy.SpringRestApplicationTests - No active profile set, falling back to default profiles: default
+""2017-03-24 16:30:52 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1b6e1eff: startup date [Fri Mar 24 16:30:52 IST 2017]; root of context hierarchy
+""2017-03-24 16:30:57 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+""2017-03-24 16:30:59 [cluster-ClusterId{value='58d4fc69ba5ed80eb0f93cd4', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+"com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:115)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:113)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:57)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	... 3 common frames omitted
+"2017-03-24 16:30:59 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1b6e1eff: startup date [Fri Mar 24 16:30:52 IST 2017]; root of context hierarchy
+""2017-03-24 16:30:59 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reports]}" onto public com.infy.Reports com.infy.SpringRestController.getReports()
+""2017-03-24 16:30:59 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save]}" onto public void com.infy.SpringRestController.saveOrders()
+""2017-03-24 16:30:59 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2017-03-24 16:30:59 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2017-03-24 16:31:00 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-24 16:31:00 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-24 16:31:00 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-24 16:31:00 [main] INFO  com.infy.SpringRestApplicationTests - Started SpringRestApplicationTests in 9.182 seconds (JVM running for 11.061)
+""2017-03-24 16:31:00 [Thread-2] INFO  o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@1b6e1eff: startup date [Fri Mar 24 16:30:52 IST 2017]; root of context hierarchy
+""2017-03-24 16:40:50 [main] INFO  com.infy.SpringRestControllerTest - Starting SpringRestControllerTest on HYDPCM252071D with PID 7444 (started by shalini.magham in D:\cloud\SpringRest with MongoDB\SpringRest\SpringRest)
+""2017-03-24 16:40:50 [main] INFO  com.infy.SpringRestControllerTest - No active profile set, falling back to default profiles: default
+""2017-03-24 16:40:50 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@32a68f4f: startup date [Fri Mar 24 16:40:50 IST 2017]; root of context hierarchy
+""2017-03-24 16:40:53 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+""2017-03-24 16:40:54 [cluster-ClusterId{value='58d4febdba5ed81d14036403', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+"com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:115)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:113)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:57)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	... 3 common frames omitted
+"2017-03-24 16:40:54 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@32a68f4f: startup date [Fri Mar 24 16:40:50 IST 2017]; root of context hierarchy
+""2017-03-24 16:40:54 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reports]}" onto public com.infy.Reports com.infy.SpringRestController.getReports()
+""2017-03-24 16:40:54 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save]}" onto public void com.infy.SpringRestController.saveOrders()
+""2017-03-24 16:40:54 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2017-03-24 16:40:54 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2017-03-24 16:40:55 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-24 16:40:55 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-24 16:40:55 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-24 16:40:55 [main] INFO  com.infy.SpringRestControllerTest - Started SpringRestControllerTest in 6.102 seconds (JVM running for 8.481)
+""2017-03-24 16:41:02 [main] INFO  org.mongodb.driver.cluster - No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]}. Waiting for 30000 ms before timing out
+""2017-03-24 16:43:57 [main] INFO  com.infy.SpringRestControllerTest - Starting SpringRestControllerTest on HYDPCM252071D with PID 11804 (started by shalini.magham in D:\cloud\SpringRest with MongoDB\SpringRest\SpringRest)
+""2017-03-24 16:43:57 [main] INFO  com.infy.SpringRestControllerTest - No active profile set, falling back to default profiles: default
+""2017-03-24 16:43:58 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@623e088f: startup date [Fri Mar 24 16:43:58 IST 2017]; root of context hierarchy
+""2017-03-24 16:44:00 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+""2017-03-24 16:44:02 [cluster-ClusterId{value='58d4ff78ba5ed82e1c158a30', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+"com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:115)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:113)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:57)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	... 3 common frames omitted
+"2017-03-24 16:44:02 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@623e088f: startup date [Fri Mar 24 16:43:58 IST 2017]; root of context hierarchy
+""2017-03-24 16:44:02 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reports]}" onto public com.infy.Reports com.infy.SpringRestController.getReports()
+""2017-03-24 16:44:02 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save]}" onto public void com.infy.SpringRestController.saveOrders()
+""2017-03-24 16:44:02 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2017-03-24 16:44:02 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2017-03-24 16:44:02 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-24 16:44:02 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-24 16:44:02 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-24 16:44:03 [main] INFO  com.infy.SpringRestControllerTest - Started SpringRestControllerTest in 6.037 seconds (JVM running for 7.365)
+""2017-03-24 16:44:10 [main] INFO  org.mongodb.driver.cluster - No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]}. Waiting for 30000 ms before timing out
+""2017-03-24 16:46:30 [main] INFO  com.infy.SpringRestControllerTest - Starting SpringRestControllerTest on HYDPCM252071D with PID 12184 (started by shalini.magham in D:\cloud\SpringRest with MongoDB\SpringRest\SpringRest)
+""2017-03-24 16:46:30 [main] INFO  com.infy.SpringRestControllerTest - No active profile set, falling back to default profiles: default
+""2017-03-24 16:46:31 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@79179359: startup date [Fri Mar 24 16:46:31 IST 2017]; root of context hierarchy
+""2017-03-24 16:46:33 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+""2017-03-24 16:46:34 [cluster-ClusterId{value='58d50011ba5ed82f98b20b35', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+"com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:115)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:113)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:57)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	... 3 common frames omitted
+"2017-03-24 16:46:35 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@79179359: startup date [Fri Mar 24 16:46:31 IST 2017]; root of context hierarchy
+""2017-03-24 16:46:35 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reports]}" onto public com.infy.Reports com.infy.SpringRestController.getReports()
+""2017-03-24 16:46:35 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save]}" onto public void com.infy.SpringRestController.saveOrders()
+""2017-03-24 16:46:35 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2017-03-24 16:46:35 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2017-03-24 16:46:35 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-24 16:46:35 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-24 16:46:35 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-24 16:46:36 [main] INFO  com.infy.SpringRestControllerTest - Started SpringRestControllerTest in 5.945 seconds (JVM running for 7.511)
+""2017-03-24 16:50:50 [main] INFO  org.mongodb.driver.cluster - No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]}. Waiting for 30000 ms before timing out
+""2017-03-28 10:45:12 [main] INFO  com.infy.SpringRestControllerTest - Starting SpringRestControllerTest on HYDPCM252071D with PID 9500 (started by shalini.magham in D:\cloud\SpringRest with MongoDB\SpringRest\SpringRest)
+""2017-03-28 10:45:12 [main] INFO  com.infy.SpringRestControllerTest - No active profile set, falling back to default profiles: default
+""2017-03-28 10:45:12 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@51acdf2e: startup date [Tue Mar 28 10:45:12 IST 2017]; root of context hierarchy
+""2017-03-28 10:45:21 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+""2017-03-28 10:45:22 [cluster-ClusterId{value='58d9f169ba5ed8251c5d4834', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+"com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:115)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:113)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:57)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	... 3 common frames omitted
+"2017-03-28 10:45:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@51acdf2e: startup date [Tue Mar 28 10:45:12 IST 2017]; root of context hierarchy
+""2017-03-28 10:45:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reports]}" onto public com.infy.Reports com.infy.SpringRestController.getReports()
+""2017-03-28 10:45:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save]}" onto public void com.infy.SpringRestController.saveOrders()
+""2017-03-28 10:45:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2017-03-28 10:45:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2017-03-28 10:45:23 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 10:45:23 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 10:45:24 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 10:45:24 [main] INFO  com.infy.SpringRestControllerTest - Started SpringRestControllerTest in 13.22 seconds (JVM running for 22.121)
+""2017-03-28 10:45:33 [main] INFO  org.mongodb.driver.cluster - No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]}. Waiting for 30000 ms before timing out
+""2017-03-28 10:45:56 [main] INFO  com.infy.SpringRestControllerTest - Starting SpringRestControllerTest on HYDPCM252071D with PID 8004 (started by shalini.magham in D:\cloud\SpringRest with MongoDB\SpringRest\SpringRest)
+""2017-03-28 10:45:56 [main] INFO  com.infy.SpringRestControllerTest - No active profile set, falling back to default profiles: default
+""2017-03-28 10:45:56 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@dbd8e44: startup date [Tue Mar 28 10:45:56 IST 2017]; root of context hierarchy
+""2017-03-28 10:46:00 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+""2017-03-28 10:46:01 [cluster-ClusterId{value='58d9f190ba5ed81f44e44cd5', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+"com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:115)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:113)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:57)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	... 3 common frames omitted
+"2017-03-28 10:46:02 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@dbd8e44: startup date [Tue Mar 28 10:45:56 IST 2017]; root of context hierarchy
+""2017-03-28 10:46:02 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reports]}" onto public com.infy.Reports com.infy.SpringRestController.getReports()
+""2017-03-28 10:46:02 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save]}" onto public void com.infy.SpringRestController.saveOrders()
+""2017-03-28 10:46:02 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2017-03-28 10:46:02 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2017-03-28 10:46:02 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 10:46:02 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 10:46:02 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 10:46:02 [main] INFO  com.infy.SpringRestControllerTest - Started SpringRestControllerTest in 7.368 seconds (JVM running for 8.88)
+""2017-03-28 10:47:39 [cluster-ClusterId{value='58d9f190ba5ed81f44e44cd5', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:10, serverValue:1}] to localhost:27017
+""2017-03-28 10:47:39 [cluster-ClusterId{value='58d9f190ba5ed81f44e44cd5', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 7]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=1262734}
+""2017-03-28 10:48:17 [main] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:11, serverValue:2}] to localhost:27017
+""2017-03-28 10:48:25 [main] ERROR com.infy.SpringRestApplication - Orders found with findAll():[com.infy.Order@78b7f805, com.infy.Order@58f2466c, com.infy.Order@5809fa26]
+""2017-03-28 10:49:18 [main] INFO  com.infy.SpringRestControllerTest - Starting SpringRestControllerTest on HYDPCM252071D with PID 1688 (started by shalini.magham in D:\cloud\SpringRest with MongoDB\SpringRest\SpringRest)
+""2017-03-28 10:49:18 [main] INFO  com.infy.SpringRestControllerTest - No active profile set, falling back to default profiles: default
+""2017-03-28 10:49:18 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@79179359: startup date [Tue Mar 28 10:49:18 IST 2017]; root of context hierarchy
+""2017-03-28 10:49:22 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+""2017-03-28 10:49:22 [cluster-ClusterId{value='58d9f25aba5ed806986c0dc7', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:3}] to localhost:27017
+""2017-03-28 10:49:22 [cluster-ClusterId{value='58d9f25aba5ed806986c0dc7', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 7]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=2125209}
+""2017-03-28 10:49:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@79179359: startup date [Tue Mar 28 10:49:18 IST 2017]; root of context hierarchy
+""2017-03-28 10:49:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reports]}" onto public com.infy.Reports com.infy.SpringRestController.getReports()
+""2017-03-28 10:49:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save]}" onto public void com.infy.SpringRestController.saveOrders()
+""2017-03-28 10:49:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2017-03-28 10:49:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2017-03-28 10:49:24 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 10:49:24 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 10:49:24 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 10:49:24 [main] INFO  com.infy.SpringRestControllerTest - Started SpringRestControllerTest in 6.848 seconds (JVM running for 8.66)
+""2017-03-28 10:49:41 [main] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:4}] to localhost:27017
+""2017-03-28 10:49:41 [main] ERROR com.infy.SpringRestApplication - Orders found with findAll():[com.infy.Order@740b6628, com.infy.Order@27fe059d, com.infy.Order@766a52f5]
+""2017-03-28 10:50:31 [main] INFO  com.infy.SpringRestControllerTest - Starting SpringRestControllerTest on HYDPCM252071D with PID 7464 (started by shalini.magham in D:\cloud\SpringRest with MongoDB\SpringRest\SpringRest)
+""2017-03-28 10:50:31 [main] INFO  com.infy.SpringRestControllerTest - No active profile set, falling back to default profiles: default
+""2017-03-28 10:50:31 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@79179359: startup date [Tue Mar 28 10:50:31 IST 2017]; root of context hierarchy
+""2017-03-28 10:50:35 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+""2017-03-28 10:50:37 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@79179359: startup date [Tue Mar 28 10:50:31 IST 2017]; root of context hierarchy
+""2017-03-28 10:50:37 [cluster-ClusterId{value='58d9f2a3ba5ed81d288220b6', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:5}] to localhost:27017
+""2017-03-28 10:50:37 [cluster-ClusterId{value='58d9f2a3ba5ed81d288220b6', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 7]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=26569104}
+""2017-03-28 10:50:37 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reports]}" onto public com.infy.Reports com.infy.SpringRestController.getReports()
+""2017-03-28 10:50:37 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save]}" onto public void com.infy.SpringRestController.saveOrders()
+""2017-03-28 10:50:37 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2017-03-28 10:50:37 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2017-03-28 10:50:37 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 10:50:37 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 10:50:38 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 10:50:38 [main] INFO  com.infy.SpringRestControllerTest - Started SpringRestControllerTest in 7.336 seconds (JVM running for 8.86)
+""2017-03-28 10:50:42 [main] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:6}] to localhost:27017
+""2017-03-28 10:50:43 [main] ERROR com.infy.SpringRestApplication - Orders found with findAll():[com.infy.Order@f171912, com.infy.Order@7d4d8579, com.infy.Order@159424e2]
+""2017-03-28 10:54:14 [main] INFO  com.infy.SpringRestControllerTest - Starting SpringRestControllerTest on HYDPCM252071D with PID 1612 (started by shalini.magham in D:\cloud\SpringRest with MongoDB\SpringRest\SpringRest)
+""2017-03-28 10:54:14 [main] INFO  com.infy.SpringRestControllerTest - No active profile set, falling back to default profiles: default
+""2017-03-28 10:54:14 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4c309d4d: startup date [Tue Mar 28 10:54:14 IST 2017]; root of context hierarchy
+""2017-03-28 10:54:19 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+""2017-03-28 10:54:19 [cluster-ClusterId{value='58d9f383ba5ed8064cf0f8e1', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:7}] to localhost:27017
+""2017-03-28 10:54:19 [cluster-ClusterId{value='58d9f383ba5ed8064cf0f8e1', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 7]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=104434013}
+""2017-03-28 10:54:20 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4c309d4d: startup date [Tue Mar 28 10:54:14 IST 2017]; root of context hierarchy
+""2017-03-28 10:54:20 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reports]}" onto public com.infy.Reports com.infy.SpringRestController.getReports()
+""2017-03-28 10:54:20 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save]}" onto public void com.infy.SpringRestController.saveOrders()
+""2017-03-28 10:54:20 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2017-03-28 10:54:20 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2017-03-28 10:54:20 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 10:54:20 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 10:54:20 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 10:54:21 [main] INFO  com.infy.SpringRestControllerTest - Started SpringRestControllerTest in 7.203 seconds (JVM running for 8.448)
+""2017-03-28 10:54:21 [main] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:8}] to localhost:27017
+""2017-03-28 10:54:21 [main] ERROR com.infy.SpringRestApplication - Orders found with findAll():[com.infy.Order@1e141e42, com.infy.Order@228cea97, com.infy.Order@1d0a61c8]
+""2017-03-28 10:54:21 [Thread-2] INFO  o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@4c309d4d: startup date [Tue Mar 28 10:54:14 IST 2017]; root of context hierarchy
+""2017-03-28 10:54:21 [Thread-2] INFO  org.mongodb.driver.connection - Closed connection [connectionId{localValue:2, serverValue:8}] to localhost:27017 because the pool has been closed.
+""2017-03-28 10:59:49 [main] INFO  com.infy.SpringRestControllerTest - Starting SpringRestControllerTest on HYDPCM252071D with PID 10236 (started by shalini.magham in D:\cloud\SpringRest with MongoDB\SpringRest\SpringRest)
+""2017-03-28 10:59:49 [main] INFO  com.infy.SpringRestControllerTest - No active profile set, falling back to default profiles: default
+""2017-03-28 10:59:49 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@79179359: startup date [Tue Mar 28 10:59:49 IST 2017]; root of context hierarchy
+""2017-03-28 10:59:53 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+""2017-03-28 10:59:54 [cluster-ClusterId{value='58d9f4d1ba5ed827fc3c880e', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:9}] to localhost:27017
+""2017-03-28 10:59:54 [cluster-ClusterId{value='58d9f4d1ba5ed827fc3c880e', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 7]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=4007526}
+""2017-03-28 10:59:55 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@79179359: startup date [Tue Mar 28 10:59:49 IST 2017]; root of context hierarchy
+""2017-03-28 10:59:55 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reports]}" onto public com.infy.Reports com.infy.SpringRestController.getReports()
+""2017-03-28 10:59:55 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save]}" onto public void com.infy.SpringRestController.saveOrders()
+""2017-03-28 10:59:55 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2017-03-28 10:59:55 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2017-03-28 10:59:55 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 10:59:55 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 10:59:55 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 10:59:56 [main] INFO  com.infy.SpringRestControllerTest - Started SpringRestControllerTest in 7.452 seconds (JVM running for 9.165)
+""2017-03-28 11:00:00 [main] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:10}] to localhost:27017
+""2017-03-28 11:00:04 [main] ERROR com.infy.SpringRestApplication - Orders found with findAll():[com.infy.Order@3fe512d2, com.infy.Order@3fde8f7c, com.infy.Order@11d86b9d]
+""2017-03-28 11:00:41 [main] INFO  com.infy.SpringRestControllerTest - Starting SpringRestControllerTest on HYDPCM252071D with PID 7848 (started by shalini.magham in D:\cloud\SpringRest with MongoDB\SpringRest\SpringRest)
+""2017-03-28 11:00:41 [main] INFO  com.infy.SpringRestControllerTest - No active profile set, falling back to default profiles: default
+""2017-03-28 11:00:41 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@dbd8e44: startup date [Tue Mar 28 11:00:41 IST 2017]; root of context hierarchy
+""2017-03-28 11:00:45 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+""2017-03-28 11:00:45 [cluster-ClusterId{value='58d9f505ba5ed81ea8ff4da7', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:11}] to localhost:27017
+""2017-03-28 11:00:45 [cluster-ClusterId{value='58d9f505ba5ed81ea8ff4da7', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 7]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=3362855}
+""2017-03-28 11:00:46 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@dbd8e44: startup date [Tue Mar 28 11:00:41 IST 2017]; root of context hierarchy
+""2017-03-28 11:00:47 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reports]}" onto public com.infy.Reports com.infy.SpringRestController.getReports()
+""2017-03-28 11:00:47 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save]}" onto public void com.infy.SpringRestController.saveOrders()
+""2017-03-28 11:00:47 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2017-03-28 11:00:47 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2017-03-28 11:00:47 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 11:00:47 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 11:00:47 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 11:00:47 [main] INFO  com.infy.SpringRestControllerTest - Started SpringRestControllerTest in 6.792 seconds (JVM running for 8.243)
+""2017-03-28 11:00:56 [main] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:12}] to localhost:27017
+""2017-03-28 11:00:56 [main] ERROR com.infy.SpringRestApplication - Orders found with findAll():[com.infy.Order@45e617c4, com.infy.Order@5042e3d0, com.infy.Order@1c34365c]
+""2017-03-28 11:01:18 [main] INFO  com.infy.SpringRestControllerTest - Starting SpringRestControllerTest on HYDPCM252071D with PID 8632 (started by shalini.magham in D:\cloud\SpringRest with MongoDB\SpringRest\SpringRest)
+""2017-03-28 11:01:18 [main] INFO  com.infy.SpringRestControllerTest - No active profile set, falling back to default profiles: default
+""2017-03-28 11:01:18 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@79179359: startup date [Tue Mar 28 11:01:18 IST 2017]; root of context hierarchy
+""2017-03-28 11:01:21 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+""2017-03-28 11:01:21 [cluster-ClusterId{value='58d9f529ba5ed821b845ff14', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:13}] to localhost:27017
+""2017-03-28 11:01:21 [cluster-ClusterId{value='58d9f529ba5ed821b845ff14', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 7]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=1911206}
+""2017-03-28 11:01:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@79179359: startup date [Tue Mar 28 11:01:18 IST 2017]; root of context hierarchy
+""2017-03-28 11:01:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reports]}" onto public com.infy.Reports com.infy.SpringRestController.getReports()
+""2017-03-28 11:01:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save]}" onto public void com.infy.SpringRestController.saveOrders()
+""2017-03-28 11:01:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2017-03-28 11:01:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2017-03-28 11:01:23 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 11:01:23 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 11:01:23 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 11:01:24 [main] INFO  com.infy.SpringRestControllerTest - Started SpringRestControllerTest in 7.131 seconds (JVM running for 8.577)
+""2017-03-28 11:01:27 [main] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:14}] to localhost:27017
+""2017-03-28 11:01:27 [main] ERROR com.infy.SpringRestApplication - Orders found with findAll():[com.infy.Order@1a950fdd, com.infy.Order@77724cbe, com.infy.Order@27dc627a]
+""2017-03-28 11:02:14 [main] INFO  com.infy.SpringRestControllerTest - Starting SpringRestControllerTest on HYDPCM252071D with PID 6748 (started by shalini.magham in D:\cloud\SpringRest with MongoDB\SpringRest\SpringRest)
+""2017-03-28 11:02:14 [main] INFO  com.infy.SpringRestControllerTest - No active profile set, falling back to default profiles: default
+""2017-03-28 11:02:14 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3d2ee678: startup date [Tue Mar 28 11:02:14 IST 2017]; root of context hierarchy
+""2017-03-28 11:02:18 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+""2017-03-28 11:02:18 [cluster-ClusterId{value='58d9f562ba5ed81a5c8935ac', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:15}] to localhost:27017
+""2017-03-28 11:02:18 [cluster-ClusterId{value='58d9f562ba5ed81a5c8935ac', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 7]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=3975597}
+""2017-03-28 11:02:46 [main] INFO  com.infy.SpringRestControllerTest - Starting SpringRestControllerTest on HYDPCM252071D with PID 7832 (started by shalini.magham in D:\cloud\SpringRest with MongoDB\SpringRest\SpringRest)
+""2017-03-28 11:02:46 [main] INFO  com.infy.SpringRestControllerTest - No active profile set, falling back to default profiles: default
+""2017-03-28 11:02:46 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@dbd8e44: startup date [Tue Mar 28 11:02:46 IST 2017]; root of context hierarchy
+""2017-03-28 11:02:50 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+""2017-03-28 11:02:51 [cluster-ClusterId{value='58d9f582ba5ed81e9868e9c8', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:16}] to localhost:27017
+""2017-03-28 11:02:51 [cluster-ClusterId{value='58d9f582ba5ed81e9868e9c8', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 7]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=1621560}
+""2017-03-28 11:03:22 [main] INFO  com.infy.SpringRestControllerTest - Starting SpringRestControllerTest on HYDPCM252071D with PID 1180 (started by shalini.magham in D:\cloud\SpringRest with MongoDB\SpringRest\SpringRest)
+""2017-03-28 11:03:22 [main] INFO  com.infy.SpringRestControllerTest - No active profile set, falling back to default profiles: default
+""2017-03-28 11:03:22 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@22899683: startup date [Tue Mar 28 11:03:22 IST 2017]; root of context hierarchy
+""2017-03-28 11:03:28 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+""2017-03-28 11:03:30 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@22899683: startup date [Tue Mar 28 11:03:22 IST 2017]; root of context hierarchy
+""2017-03-28 11:03:30 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reports]}" onto public com.infy.Reports com.infy.SpringRestController.getReports()
+""2017-03-28 11:03:30 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save]}" onto public void com.infy.SpringRestController.saveOrders()
+""2017-03-28 11:03:30 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2017-03-28 11:03:30 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2017-03-28 11:03:30 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 11:03:30 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 11:03:30 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 11:03:30 [cluster-ClusterId{value='58d9f5a7ba5ed8049c8b4d87', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:17}] to localhost:27017
+""2017-03-28 11:03:30 [cluster-ClusterId{value='58d9f5a7ba5ed8049c8b4d87', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 7]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=44120420}
+""2017-03-28 11:03:31 [main] INFO  com.infy.SpringRestControllerTest - Started SpringRestControllerTest in 9.572 seconds (JVM running for 12.383)
+""2017-03-28 11:03:31 [main] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:18}] to localhost:27017
+""2017-03-28 11:03:31 [main] ERROR com.infy.SpringRestApplication - Orders found with findAll():[com.infy.Order@403acbdb, com.infy.Order@78a7114f, com.infy.Order@ace10f9]
+""2017-03-28 11:03:31 [Thread-4] INFO  o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@22899683: startup date [Tue Mar 28 11:03:22 IST 2017]; root of context hierarchy
+""2017-03-28 11:03:35 [Thread-4] INFO  org.mongodb.driver.connection - Closed connection [connectionId{localValue:2, serverValue:18}] to localhost:27017 because the pool has been closed.
+""2017-03-28 11:21:53 [main] INFO  com.infy.SpringRestControllerTest - Starting SpringRestControllerTest on HYDPCM252071D with PID 7416 (started by shalini.magham in D:\cloud\SpringRest with MongoDB\SpringRest\SpringRest)
+""2017-03-28 11:21:53 [main] INFO  com.infy.SpringRestControllerTest - No active profile set, falling back to default profiles: default
+""2017-03-28 11:21:53 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@16b7e04a: startup date [Tue Mar 28 11:21:53 IST 2017]; root of context hierarchy
+""2017-03-28 11:21:59 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+""2017-03-28 11:22:00 [cluster-ClusterId{value='58d9f9ffba5ed81cf8190612', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:19}] to localhost:27017
+""2017-03-28 11:22:00 [cluster-ClusterId{value='58d9f9ffba5ed81cf8190612', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 7]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=61970883}
+""2017-03-28 11:22:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@16b7e04a: startup date [Tue Mar 28 11:21:53 IST 2017]; root of context hierarchy
+""2017-03-28 11:22:06 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reports]}" onto public com.infy.Reports com.infy.SpringRestController.getReports()
+""2017-03-28 11:22:06 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save]}" onto public void com.infy.SpringRestController.saveOrders()
+""2017-03-28 11:22:06 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+""2017-03-28 11:22:06 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+""2017-03-28 11:22:06 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 11:22:06 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 11:22:06 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+""2017-03-28 11:22:08 [main] INFO  com.infy.SpringRestControllerTest - Started SpringRestControllerTest in 16.335 seconds (JVM running for 19.261)
+""2017-03-28 11:22:10 [main] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:20}] to localhost:27017
+""2017-03-28 11:22:10 [main] ERROR com.infy.SpringRestApplication - Orders found with findAll():[com.infy.Order@4e6fa97c, com.infy.Order@b6eea98, com.infy.Order@3e57efe3]
+""2017-03-28 11:22:10 [Thread-4] INFO  o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@16b7e04a: startup date [Tue Mar 28 11:21:53 IST 2017]; root of context hierarchy
+""2017-03-28 11:22:15 [Thread-4] INFO  org.mongodb.driver.connection - Closed connection [connectionId{localValue:2, serverValue:20}] to localhost:27017 because the pool has been closed.
 "

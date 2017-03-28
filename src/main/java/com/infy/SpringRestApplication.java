@@ -10,7 +10,6 @@ public class SpringRestApplication {
 	final static Logger log = LoggerFactory.getLogger(SpringRestApplication.class);
 	public static void main(String[] args) {
 		
-		log.error("calling run method");
 		SpringApplication.run(SpringRestApplication.class, args);
 	}
 }
