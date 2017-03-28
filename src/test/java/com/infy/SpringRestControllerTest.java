@@ -25,14 +25,14 @@ public class SpringRestControllerTest {
 	@Test
 	public void testGetReports() {
 		
-		//String json = new Gson().toJson(reps);
-		Reports body = this.springRestControllerInst.getReports();
+		
+		Reports body = springRestControllerInst.getReports();
 		
 		 
 		  
 		   
 	
-		//Reports reports = springRestControllerInst.getReports();
+		
 		
 
 	}
